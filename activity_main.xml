@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapView"
+        />
+
+    <!-- Zoom In Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/zoomin"
+        app:backgroundTint="@color/white"
+        app:tint="@color/black"
+        app:maxImageSize="40dp"
+        android:contentDescription="Zoom In" />
+
+    <!-- Zoom Out Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btn_zoom_in"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/zoomout"
+        app:backgroundTint="@color/white"
+        app:tint="@color/black"
+        app:maxImageSize="40dp"
+        android:contentDescription="Zoom Out" />
+
+    <!-- Location Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/search"
+        app:backgroundTint="@color/white"
+        app:tint="@color/black"
+        app:maxImageSize="40dp"
+        android:contentDescription="My Location" />
+
+    <FrameLayout
+        android:id="@+id/compass_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/rounded_background"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <!-- Ikon kompas yang akan berputar -->
+        <ImageView
+            android:id="@+id/compass"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/compass"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"/>
+    </FrameLayout>
+
+</RelativeLayout>
